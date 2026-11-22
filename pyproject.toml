@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "percy"
+version = "0.1.0"
+description = "Manage your TP-Link router and Wi-Fi, run a network-wide ad blocker, and watch your home network's security."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "tplinkrouterc6u>=5.41,<6",
+    "anthropic>=2.12,<3",
+    "requests>=2.31",
+    "keyring>=25",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+percy = "percy.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["percy*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
