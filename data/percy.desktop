@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Percy
+GenericName=Home Network Guard
+Comment=Manage your router and Wi-Fi, block ads, and watch your network's security
+Exec=percy gui
+Icon=network-wireless-encrypted
+Terminal=false
+Categories=Network;Security;Settings;
+Keywords=router;wifi;adblock;security;dns;
+StartupWMClass=io.github.percy.NetworkGuard
